@@ -29,4 +29,3 @@ while (True):
 	# 	break
 
 # print("welcome to country quiz ")
-

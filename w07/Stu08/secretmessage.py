@@ -12,6 +12,7 @@ def replaceLetter(messsage):
     while True:
         print("""Commands: 'undo' to undo the last letter entered, 'reset' to reset the message, 'done' to quit""")
         print("Current message:",message_current)
+        count_letters(message_current)
         print("Letters replaced: ", letter_list)
         oldLetter = input("What letter do you want to replace? ")
         if oldLetter.lower() == 'undo':
@@ -68,7 +69,7 @@ def replaceLetter(messsage):
         letter_list.append(oldLetter)
 
         message_current = message_current.replace(oldLetter, newLetter.upper())
-        count_letters(message_current)
+        
         
         
 def count_letters(msg):
@@ -78,12 +79,12 @@ def count_letters(msg):
             letter_frequency[letter] = 1
         else:
             letter_frequency[letter] += 1
-    
-    # print(sorted(letter_frequency, key=letter_frequency.get, reverse= True))
-    print('[Letter Frequency]', end=' ')
-    for item in sorted(letter_frequency, key=letter_frequency.get, reverse= True):
-        print(repr(item),":",letter_frequency[item], end=', ')
-    print()
+            
+    print('Letter Frequency:', end=' ')
+    print(repr(sorted(letter_frequency, key=letter_frequency.get, reverse= True)))
+    # for item in sorted(letter_frequency, key=letter_frequency.get, reverse= True):
+    #     print(repr(item),":",letter_frequency[item], end=', ')
+    # print()
 
 #run code
 replaceLetter(message)
