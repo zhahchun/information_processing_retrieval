@@ -1,0 +1,10 @@
+world‘s : 1
+stage : 1
+men : 1
+women : 1
+merely : 1
+players : 1
+exits : 1
+entrances : 1
+one : 1
+man : 1
